@@ -1,0 +1,562 @@
+/* ! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ! @@@@@@@@@@@@@@@@@@@@@   MOBILE    @@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media screen and (min-width: 320px) {
+  /*?===========  Our Team  ===========*/
+  .team .container {
+    width: 296px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*?=========== / Our Team  ===========*/
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .container {
+    max-width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*! ***************** HEADER (for everyone)******************/
+
+  /*?============== Menu  ==============*/
+
+  /*?============== / Menu  ==============*/
+
+  /*! ********************** / HEADER ***********************/
+
+  /*%%%%%%%%%%%%%%%%%%%%%%%% MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
+
+  /*! ********************** MAIN INDEX  ***********************/
+  /*?============== Hero  ==============*/
+  /* у базових стилях */
+  /*?============== / 1 Hero  ==============*/
+  /*?============== 2 About our company  ==============*/
+  /* у базових стилях */
+  /*?============== / 2 About our company  ==============*/
+  /*?===========  Our Team  ===========*/
+  /* умова від 320px */
+
+  /*?=========== / Our Team  ===========*/
+  /** }}}}}}}}}} Закриття умови*/
+}
+
+/*! Налаштування закриті пілся  767px, далі не йдуть!!!!! */
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+  .contacts {
+    display: none;
+  }
+
+  .mobile-menu-open-btn {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+  .about-company-list {
+    gap: calc((var(--default-small-gap)) * 3);
+  }
+
+  .about-company .subtitle {
+    text-align: center;
+  }
+
+  .footer-cotainer {
+    justify-content: center;
+    gap: calc((var(--default-small-gap)) * 3);
+  }
+  .footer-subscribe-form {
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+/* ! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ! @@@@@@@@@@@@@@@@@@@@@   tablet    @@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .mobile-menu-open-btn {
+    display: none;
+  }
+
+  .header-site {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .header-container {
+    align-items: center;
+  }
+
+  .nav-site {
+    display: flex;
+  }
+
+  .logo {
+    margin-right: 120px;
+  }
+
+  /*?============== Menu  ==============*/
+  .menu-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-dark);
+    transition: color var(--transition-dur-and-fun);
+    position: relative;
+  }
+
+  .menu-link:hover,
+  .menu-link:focus,
+  .menu-link:active {
+    color: var(--color-pressed-state);
+  }
+
+  .menu {
+    display: flex;
+    gap: 40px;
+  }
+
+  .current::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--color-pressed-state);
+    border-radius: 2px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(28px);
+  }
+
+  .menu-link.current {
+    color: var(--color-pressed-state);
+  }
+
+  /*?============== / Menu  ==============*/
+
+  /*?============== Contacts  ==============*/
+
+  .contacts {
+    display: flex;
+    font-style: normal;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts-item {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contacts-link {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+    transition: color var(--transition-dur-and-fun);
+  }
+
+  .contacts-link:hover,
+  .contacts-link:focus {
+    color: var(--color-pressed-state);
+  }
+
+  /*?============== / Contacts  ==============*/
+
+  /*! ********************** / HEADER ***********************/
+
+  /*%%%%%%%%%%%%%%%%%%%%%%%% MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
+
+  /*! ********************** MAIN INDEX  ***********************/
+  /*?============== Hero  ==============*/
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/decor/hero-tab@2x.jpg);
+    max-width: 768px;
+    height: 436px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/decor/hero-tab@2x.jpg);
+    }
+  }
+
+  .title-site {
+    max-width: 496px;
+    margin-bottom: 36px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+  /*?============== / 1 Hero  ==============*/
+
+  /*?=========== / About our company  ===========*/
+
+  .about-company-item {
+    width: calc((100% - var(--default-small-gap)) / 2);
+  }
+
+  /*?=========== / About our company  ===========*/
+
+  /*?=========== 4 Our Team  ===========*/
+  .team .container {
+    width: 582px;
+  }
+  .team-list {
+    gap: 64px;
+    column-gap: var(--default-small-gap);
+  }
+
+  .team-item {
+    flex-basis: calc((100% - var(--default-small-gap)) / 2);
+  }
+
+  /*?=========== / 4 Our Team  ===========*/
+
+  /*?=========== 5 Customers  ===========*/
+  .customers {
+    padding-top: calc((var(--default-small-gap)) * 3);
+  }
+
+  .customers-list {
+    column-gap: var(--default-small-gap);
+  }
+  .customers-item {
+    width: calc((100% - 2 * var(--default-small-gap)) / 3);
+  }
+
+  /*?=========== / 5 Customers  ===========*/
+
+  /*! ***************** FOOTER (for everyone)******************/
+  .footer-site {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer-text {
+    display: inline;
+  }
+
+  .footer-info {
+    max-width: 264px;
+    margin-right: var(--default-small-gap);
+  }
+
+  /*************** footer-social-icon *************/
+
+  .footer-social-title {
+    text-align: left;
+  }
+
+  /*************** /footer-social-icon *************/
+
+  /************** footer-subscribe-form  ********/
+
+  .footer-subscribe-form {
+    width: 453px;
+    height: 80px;
+    justify-content: start;
+    align-self: start;
+    margin-top: calc((var(--default-small-gap)) * 3);
+  }
+  .subscribe-wrapper {
+    gap: var(--default-small-gap);
+    flex-direction: row;
+  }
+
+  .subscribe-text {
+    text-align: left;
+  }
+  .footer-subscribe-input {
+    width: 264px;
+  }
+
+  .subscribe-btn {
+    min-width: 165px;
+  }
+
+  /**********  / footer-subscribe-form  ********/
+  /*! ******************* / FOOTER ********************/
+
+  /*! <!--!#######  MODAL WINDOW    ####### --> */
+  .modal {
+    min-width: 408px;
+    padding: 72px var(--default-small-gap) var(--default-small-gap);
+  }
+
+  .modal-label:nth-last-child(4) {
+    margin-bottom: 16px;
+  }
+  /*! <!--!####### / MODAL WINDOW    ####### --> */
+
+  /** }}}}}}}}}} Закриття умови*/
+}
+
+/*! Налаштування закриті після 1199px, далі не йдуть!!!!! */
+
+@media screen and (max-width: 1199px) {
+  /* Ховаємо секцію doing та іконки секції about-company включаючи мобільну і планшетну версії */
+  .about-company-icon {
+    display: none;
+  }
+  .doing {
+    display: none;
+  }
+  .contacts {
+    width: 119px;
+    height: 42px;
+  }
+  .about-company-list {
+    gap: 64px;
+    column-gap: var(--default-small-gap);
+  }
+
+  .about-company .subtitle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-transform: capitalize;
+  }
+
+  .about-company p {
+    font-weight: 500;
+  }
+}
+
+/*! Налаштування закриті на інтервалі від 768px до 1199px*/
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /*! ***************** FOOTER (for everyone)******************/
+
+  .customers .container,
+  .footer-cotainer {
+    width: 584px;
+  }
+}
+
+/* ! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ! @@@@@@@@@@@@@@@@@@@@@   DESKTOP    @@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /*! ***************** HEADER (for everyone)******************/
+  .header-site {
+    padding-top: var(--default-small-gap);
+    padding-bottom: var(--default-small-gap);
+
+    /*?==============  Contacts  ==============*/
+  }
+
+  .contacts-list {
+    flex-wrap: nowrap;
+    gap: 40px;
+  }
+
+  .contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  /*?============== / Contacts  ==============*/
+
+  /*! ********************** / HEADER ***********************/
+  /*%%%%%%%%%%%%%%%%%%%%%%%% MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
+
+  /*! ********************** MAIN INDEX  ***********************/
+  /*?============== Hero  ==============*/
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/decor/hero.jpg);
+    max-width: 1440px;
+    height: 600px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/decor/hero-desk@2x.jpg);
+    }
+  }
+
+  .title-site {
+    margin-bottom: calc(2 * var(--default-small-gap));
+  }
+  /*?==============/ Hero  ==============*/
+
+  /*?=========== 2 About our company  ===========*/
+  .about-company {
+    padding-top: var(--default-big-gap);
+    padding-bottom: var(--default-big-gap);
+  }
+
+  .about-company-list {
+    flex-wrap: nowrap;
+    gap: var(--default-small-gap);
+  }
+
+  .about-company-item {
+    width: calc((100% -3 * var(--default-small-gap)) / 4);
+  }
+
+  .about-company-icon {
+    display: flex;
+    /* width: 264px; */
+    height: 112px;
+    padding: 0;
+    margin-bottom: 8px;
+    background: var(--color-light);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .company-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  /*?=========== / About our company  ===========*/
+
+  /*?=========== 3 What are we doing  ===========*/
+  /* Styles for <h2 class="title"> are defined in the COMPONENTS section. */
+  .doing {
+    padding-bottom: var(--default-big-gap);
+  }
+
+  .doing-list {
+    display: flex;
+    gap: var(--default-small-gap);
+  }
+
+  /* .doing-item:not(:last-child) {
+  padding-right: 24px;
+} */
+  /*?=========== / What are we doing  ===========*/
+
+  /*?=========== 4 Our Team  ===========*/
+
+  .team .container {
+    width: 1158px;
+  }
+
+  .team {
+    padding-top: var(--default-big-gap);
+    padding-bottom: var(--default-big-gap);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .team-list {
+    flex-wrap: nowrap;
+    gap: var(--default-small-gap);
+  }
+
+  .team-item {
+    flex-basis: calc((100% - 3 * var(--default-small-gap)) / 4);
+  }
+
+  /*?=========== / 4 Our Team  ===========*/
+
+  /*?=========== 5 Customers  ===========*/
+  .customers {
+    padding-top: var(--default-big-gap);
+    padding-bottom: var(--default-big-gap);
+  }
+
+  .customers-list {
+    flex-wrap: nowrap;
+    gap: var(--default-small-gap);
+  }
+
+  .customers-item {
+    width: calc((100% - 5 * var(--default-small-gap)) / 6);
+  }
+  /*?=========== / 5 Customers  ===========*/
+
+  /*! ***************** FOOTER (for everyone)******************/
+  .footer-site {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 0px;
+    max-width: 1440px;
+  }
+
+  .footer-text {
+    display: inline;
+  }
+
+  .footer-info {
+    max-width: 264px;
+    margin-right: var(--default-big-gap);
+  }
+
+  /*************** footer-social-icon *************/
+
+  .footer-social-title {
+    text-align: left;
+  }
+
+  /*************** /footer-social-icon *************/
+
+  /************** footer-subscribe-form  ********/
+
+  .footer-subscribe-form {
+    margin-top: 0;
+    width: 453px;
+    height: 80px;
+    margin-left: auto;
+    justify-content: start;
+    align-self: start;
+  }
+  .subscribe-wrapper {
+    gap: var(--default-small-gap);
+    flex-direction: row;
+  }
+
+  .subscribe-text {
+    text-align: left;
+  }
+  .footer-subscribe-input {
+    width: 264px;
+  }
+
+  .subscribe-btn {
+    min-width: 165px;
+  }
+
+  /**********  / footer-subscribe-form  ********/
+  /*! ******************* / FOOTER ********************/
+
+  /** }}}}}}}}}} Закриття умови*/
+}

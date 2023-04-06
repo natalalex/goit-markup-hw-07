@@ -26,8 +26,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-p {
+h4 p {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -53,12 +52,11 @@ button {
   text-decoration: none;
 }
 .container {
-  padding-left: 16px;
-  padding-right: 16px;
-
-  outline: 1px solid grey;
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
-
 .hidden-header {
   /* display: none; */
   position: absolute;
@@ -99,7 +97,7 @@ button {
 /*! ***************** HEADER (for everyone)******************/
 .header-site {
   padding-top: var(--default-small-gap);
-  padding-bottom: 22px;
+  padding-bottom: var(--default-small-gap);
   background-color: var(--color-title-site);
   border-bottom: 1px solid var(--color-accent);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -107,13 +105,18 @@ button {
 
 .header-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+.nav-site {
+  display: flex;
 }
 
 /*?============== Logo  ==============*/
 /*== components for all logs ==*/
 .logo {
-  /* margin-right: 76px; */
+  margin-right: 76px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -132,6 +135,72 @@ button {
 
 /*?============== / Logo  ==============*/
 
+/*?============== Menu  ==============*/
+.menu-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+  transition: color var(--transition-dur-and-fun);
+  position: relative;
+}
+
+.menu-link:hover,
+.menu-link:focus,
+.menu-link:active {
+  color: var(--color-pressed-state);
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--color-pressed-state);
+  border-radius: 2px;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(28px);
+}
+
+.menu-link.current {
+  color: var(--color-pressed-state);
+}
+
+/*?============== / Menu  ==============*/
+
+/*?============== Contacts  ==============*/
+
+.contacts {
+  font-style: normal;
+}
+
+.contacts-list {
+  display: flex;
+  gap: 40px;
+}
+
+.contacts-link {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  transition: color var(--transition-dur-and-fun);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--color-pressed-state);
+}
+
+/*?============== / Contacts  ==============*/
 /*! ********************** / HEADER ***********************/
 
 /*%%%%%%%%%%%%%%%%%%%%%%%% MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
@@ -140,33 +209,27 @@ button {
 /*?============== Hero  ==============*/
 .hero {
   background-color: var(--color-dark);
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/decor/hero-mob.jpg);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/decor/hero.jpg);
 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
-  max-width: 428px;
-  height: 432px;
+  max-width: 1440px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 112px;
-  padding-bottom: 112px;
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/decor/hero-mob@2x.jpg);
-  }
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .title-site {
   display: block;
-  max-width: 320px;
-  margin: 0 auto calc(3 * var(--default-small-gap));
-  font-size: 36px;
-  line-height: 1.11;
+  max-width: 496px;
+  margin: 0 auto calc(2 * var(--default-small-gap));
+  font-size: 56px;
+  line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--color-title-site);
@@ -202,36 +265,76 @@ button {
 /* Styles for <h2 class="hidden-header">, <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body */
 
 .about-company {
-  padding-top: calc((var(--default-small-gap)) * 4);
-  padding-bottom: calc((var(--default-small-gap)) * 4);
+  padding-top: var(--default-big-gap);
+  padding-bottom: var(--default-big-gap);
 }
 
 .about-company-list {
   display: flex;
-  flex-wrap: wrap;
+  gap: var(--default-small-gap);
 }
 
 .about-company-item {
-  width: 100%;
+  width: calc((100% -3 * var(--default-small-gap)) / 4);
+}
+
+/* .about-company-item:not(:last-child) {
+  margin-right: 24px;
+} */
+.about-company-icon {
+  display: flex;
+
+  /* width: 264px; */
+
+  height: 112px;
+  padding: 0;
+  margin-bottom: 8px;
+  background: var(--color-light);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-icon {
+  width: 64px;
+  height: 64px;
 }
 
 /*?=========== / About our company  ===========*/
 
+/*?=========== 3 What are we doing  ===========*/
+/* Styles for <h2 class="title"> are defined in the COMPONENTS section. */
+.doing {
+  padding-bottom: var(--default-big-gap);
+}
+
+.doing-list {
+  display: flex;
+  gap: var(--default-small-gap);
+}
+
+/* .doing-item:not(:last-child) {
+  padding-right: 24px;
+} */
+/*?=========== / What are we doing  ===========*/
+
 /*?=========== 4 Our Team  ===========*/
 .team {
   background-color: var(--color-light);
-  padding-top: calc((var(--default-small-gap)) * 4);
-  padding-bottom: calc((var(--default-small-gap)) * 4);
+  padding-top: var(--default-big-gap);
+  padding-bottom: var(--default-big-gap);
 }
+
+/* Styles for <h2 class="title">,  <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body */
 
 .team-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: calc((var(--default-small-gap)) * 3);
+
+  gap: var(--default-small-gap);
 }
 
 .team-item {
-  flex-basis: 100%;
+  flex-basis: calc((100% - 3 * var(--default-small-gap)) / 4);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
@@ -242,6 +345,10 @@ button {
   padding: 32px 0;
   border-radius: 0px 0px 4px 4px;
 }
+
+/* .team-item:not(:last-child) {
+  margin-right: 24px;
+} */
 .profession {
   text-align: center;
   margin-bottom: calc(var(--default-small-gap) / 3);
@@ -293,24 +400,22 @@ button {
 /*?=========== 5 Customers  ===========*/
 
 .customers {
-  padding-top: calc((var(--default-small-gap)) * 4);
-  padding-bottom: calc((var(--default-small-gap)) * 4);
+  padding-top: var(--default-big-gap);
+  padding-bottom: var(--default-big-gap);
   padding-left: auto;
   padding-right: auto;
 }
 
 .customers-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: calc((var(--default-small-gap)) * 3);
-  column-gap: 16px;
+  gap: var(--default-small-gap);
   margin: 0;
   padding: 0;
 }
 
 .customers-item {
   align-items: center;
-  width: calc((100% - 16px) / 2);
+  width: calc((100% - 5 * var(--default-small-gap)) / 6);
 }
 
 .customers-link {
@@ -346,25 +451,145 @@ button {
 
 /*%%%%%%%%%%%%%%%%%%%%%%%% / MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
 
+/*%%%%%%%%%%%%%%%%%%%%%%%% PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
+/*! ********************  MAIN PORTFOLIO*********************/
+/*?=========== Our projects  ===========*/
+
+/* Styles for <h2 class="hidden-header">,  are defined in the COMPONENTS section. */
+/*?============== Filter ==============*/
+
+.projects {
+  padding-top: 96px;
+  padding-bottom: var(--default-big-gap);
+}
+
+.selection-portfolio {
+  display: flex;
+  justify-content: center;
+  gap: var(--default-small-gap);
+  margin-bottom: 72px;
+}
+
+.selection-btn {
+  background: var(--color-light);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 12px 24px;
+
+  /* Button Text */
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-brand);
+  box-shadow: none;
+
+  transition: background-color var(--transition-dur-and-fun), color var(--transition-dur-and-fun), box-shadow var(--transition-dur-and-fun), border-color var(--transition-dur-and-fun);
+}
+
+.selection-btn:hover,
+.selection-btn:focus {
+  background-color: var(--color-pressed-state);
+  color: var(--color-title-site);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-pressed-state);
+}
+
+.selection-btn {
+  cursor: pointer;
+}
+
+/*?============== / Filter ==============*/
+
+/*?========= /Photo gallery of projects ==========*/
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(2 * var(--default-small-gap)) var(--default-small-gap);
+}
+
+.projects-item {
+  flex-basis: calc((100% - 2 * var(--default-small-gap)) / 3);
+}
+
+.projects-link {
+  display: block;
+  box-shadow: none;
+  transition: box-shadow var(--transition-dur-and-fun);
+}
+
+.projects-link:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.projects-info {
+  padding: 32px 16px;
+  width: 100%;
+  background: var(--color-title-site);
+  border-left: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+  border-right: 1px solid var(--color-accent);
+}
+
+/* Styles for  <h2 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body (except color)*/
+.projects-text {
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+.projects_wrapper_overlay {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px 0 32px;
+
+  background-color: var(--color-primary-brand);
+  color: var(--color-light);
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform var(--transition-dur-and-fun);
+}
+
+.projects-link:hover .projects_overlay,
+.projects-link:focus .projects_overlay {
+  transform: translateY(0%);
+}
+
+/*?========= / Photo gallery of projects ==========*/
+/*! ******************** / MAIN PORTFOLIO *********************/
+/*%%%%%%%%%%%%%%%%%%%%%%%% /PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
+
 /*! ***************** FOOTER (for everyone)******************/
 .footer-site {
   background: var(--color-dark);
-  padding-top: calc((var(--default-small-gap)) * 4);
-  padding-bottom: calc((var(--default-small-gap)) * 4);
+  padding-top: 100px;
+  padding-bottom: 100px;
   padding-right: 0;
   padding-left: 0;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .footer-cotainer {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .logo-footer {
   display: block;
-  margin: 0 auto 16px;
-  text-align: center;
+  margin-right: 0;
+  margin-bottom: 16px;
 }
 
 .logo-studio-footer {
@@ -373,17 +598,19 @@ button {
 
 .footer-text {
   color: var(--color-accent);
-  display: block;
 }
 
 .footer-info {
-  max-width: 268px;
+  max-width: 264px;
+  margin-right: var(--default-big-gap);
 }
 
 /*************** footer-social-icon *************/
-.footer-social-icon {
-  max-width: 208px;
-}
+/* .footer-social-icon {
+  width: 208px;
+  height: 80px;
+  margin-right: 80px;
+} */
 
 .footer-social-title {
   margin-top: 0;
@@ -393,8 +620,8 @@ button {
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 0.02em;
+
   color: var(--color-title-site);
-  text-align: center;
 }
 
 .footer-social-icon-list {
@@ -436,19 +663,17 @@ button {
 /************** footer-subscribe-form  ********/
 
 .footer-subscribe-form {
-  width: 100%;
-  height: 136px;
+  width: 453px;
+  height: 80px;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
+  justify-content: start;
   padding: 0;
 }
-
 .subscribe-wrapper {
-  width: 100%;
   display: flex;
-  gap: 16px;
-  flex-direction: column;
-  align-items: center;
+  gap: var(--default-small-gap);
 }
 .subscribe-text {
   margin-top: 0;
@@ -458,11 +683,10 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-title-site);
-  text-align: center;
 }
 
 .footer-subscribe-input {
-  width: 100%;
+  width: 264px;
   height: 40px;
   padding: 8px 16px;
   border: 1px solid var(--color-title-site);
@@ -473,16 +697,14 @@ button {
 .footer-subscribe-input {
   color: var(--color-title-site);
 }
-
 .footer-subscribe-input::placeholder {
   font-size: 12px;
   line-height: 2;
 }
-
 .subscribe-btn {
   display: flex;
   height: 40px;
-  width: 165px;
+  min-width: 165px;
   align-items: center;
   justify-content: center;
   padding: 8px var(--default-small-gap);
@@ -539,9 +761,9 @@ button {
 
 .modal {
   position: absolute;
-  min-width: 392px;
+  min-width: 408px;
   /* min-height: 584px; */
-  padding: 72px 16px var(--default-small-gap);
+  padding: 72px var(--default-small-gap) var(--default-small-gap);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -612,7 +834,7 @@ button {
 }
 
 .modal-label:nth-last-child(4) {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .modal-input {

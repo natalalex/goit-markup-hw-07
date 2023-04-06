@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
     <!--  -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <!--! the HEADER for everyone -->
@@ -24,9 +25,15 @@
             <li class="menu-item"><a class="menu-link link current" href="./index.html">Studio</a></li>
             <li class="menu-item"><a class="menu-link link" href="./portfolio.html">Portfolio</a></li>
             <li class="menu-item"><a class="menu-link link" href="">Contacts</a></li>
-            <!-- Прибрала current  і перехід до контактів через якор #contacts, бо автоперевірка лається -->
           </ul>
         </nav>
+
+        <button type="button" class="mobile-menu-open-btn">
+          <svg class="mobile-menu-open__icon" width="32" height="22">
+            <use href="./images/decor/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+
         <address class="contacts">
           <ul class="contacts-list list">
             <li class="contacts-item"><a class="contacts-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
@@ -94,9 +101,17 @@
         <div class="container">
           <h2 class="title">What are we doing</h2>
           <ul class="doing-list list">
-            <li class="doing-item"><img src="./images/doing/monitor.jpg" alt="Monitor screen with analytical information." width="360" height="300" /></li>
-            <li class="doing-item"><img src="./images/doing/phones.jpg" alt="Phone screen and its screenshots with correspondence." width="360" height="300" /></li>
-            <li class="doing-item"><img src="./images/doing/laptop-phone.jpg" alt="Phone in hand on the background of a laptop - the choice of a place to relax." width="360" height="300" /></li>
+            <li class="doing-item"><img srcset="./images/doing/monitor.jpg 1x, ./images/doing/monitor@2x.jpg 2x" src="./images/doing/monitor.jpg" alt="Monitor screen with analytical information." width="360" height="300" /></li>
+            <li class="doing-item"><img srcset="./images/doing/phones.jpg 1x, ./images/doing/phones@2x.jpg 2x" src="./images/doing/phones.jpg" alt="Phone screen and its screenshots with correspondence." width="360" height="300" /></li>
+            <li class="doing-item">
+              <img
+                srcset="./images/doing/laptop-phone.jpg 1x, ./images/doing/laptop-phone@2x.jpg 2x"
+                src="./images/doing/laptop-phone.jpg"
+                alt="Phone in hand on the background of a laptop - the choice of a place to relax."
+                width="360"
+                height="300"
+              />
+            </li>
           </ul>
         </div>
       </section>
@@ -106,7 +121,7 @@
           <h2 class="title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-item">
-              <img src="./images/employees/mark-guerrero.jpg" alt="photo of Mark Guerrero" width="264" height="260" />
+              <img srcset="./images/employees/mark-guerrero.jpg 1x, ./images/employees/mark-guerrero@2x.jpg 2x" src="./images/employees/mark-guerrero.jpg" alt="photo of Mark Guerrero" width="264" height="260" />
               <div class="team-info">
                 <h3 class="subtitle">Mark Guerrero</h3>
                 <p class="profession">Product Designer</p>
@@ -147,7 +162,7 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/employees/tom-ford.jpg" alt="photo of Tom Ford" width="264" height="260" />
+              <img srcset="./images/employees/tom-ford.jpg 1x, ./images/employees/tom-ford@2x.jpg 2x" src="./images/employees/tom-ford.jpg" alt="photo of Tom Ford" width="264" height="260" />
               <div class="team-info">
                 <h3 class="subtitle">Tom Ford</h3>
                 <p class="profession">Frontend Developer</p>
@@ -188,7 +203,7 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/employees/camila-garcia.jpg" alt="photo of Camila Garcia" width="264" height="260" />
+              <img srcset="./images/employees/camila-garcia.jpg 1x, ./images/employees/camila-garcia@2x.jpg 2x" src="./images/employees/camila-garcia.jpg" alt="photo of Camila Garcia" width="264" height="260" />
               <div class="team-info">
                 <h3 class="subtitle">Camila Garcia</h3>
                 <p class="profession">Marketing</p>
@@ -229,7 +244,7 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/employees/daniel-wilson.jpg" alt="hoto of Daniel Wilson" width="264" height="260" />
+              <img srcset="./images/employees/daniel-wilson.jpg 1x, ./images/employees/daniel-wilson@2x.jpg 2x" src="./images/employees/daniel-wilson.jpg" alt="hoto of Daniel Wilson" width="264" height="260" />
               <div class="team-info">
                 <h3 class="subtitle">Daniel Wilson</h3>
                 <p class="profession">UI Designer</p>
@@ -437,6 +452,6 @@
       </div>
     </div>
     <!--!#######  / modal window   ####### -->
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal.js" type="module"></script>
   </body>
 </html>
