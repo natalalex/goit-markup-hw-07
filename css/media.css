@@ -7,7 +7,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: index 10000;
+  z-index: 1000000;
   top: 0;
   left: 0;
   overflow-y: scroll;
@@ -442,6 +442,52 @@
 
   /*?=========== / 5 Customers  ===========*/
 
+  /*! ********************* / MAIN INDEX *********************/
+
+  /*%%%%%%%%%%%%%%%%%%%%%%%% / MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
+
+  /*%%%%%%%%%%%%%%%%%%%%%%%% PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
+  /*! ********************  MAIN PORTFOLIO*********************/
+  /*?=========== Our projects  ===========*/
+
+  /* Styles for <h2 class="hidden-header">,  are defined in the COMPONENTS section. */
+  /*?============== Filter ==============*/
+
+  .projects {
+    padding-top: 64px;
+    padding-bottom: calc((var(--default-small-gap)) * 4);
+  }
+
+  .selection-portfolio {
+    width: 100%;
+    height: 48px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: var(--default-small-gap);
+    margin-bottom: 64px;
+  }
+
+  .selection-btn {
+    padding: 12px var(--default-small-gap);
+  }
+
+  /*?============== / Filter ==============*/
+
+  /*?========= /Photo gallery of projects ==========*/
+
+  .projects-list {
+    gap: 72px;
+    column-gap: 16px;
+  }
+
+  .projects-item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+
+  /*?========= / Photo gallery of projects ==========*/
+  /*! ******************** / MAIN PORTFOLIO *********************/
+  /*%%%%%%%%%%%%%%%%%%%%%%%% /PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
+
   /*! ***************** FOOTER (for everyone)******************/
   .footer-site {
     padding-top: 100px;
@@ -693,6 +739,42 @@
     width: calc((100% - 5 * var(--default-small-gap)) / 6);
   }
   /*?=========== / 5 Customers  ===========*/
+
+  /*%%%%%%%%%%%%%%%%%%%%%%%% / MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
+
+  /*%%%%%%%%%%%%%%%%%%%%%%%% PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
+  /*! ********************  MAIN PORTFOLIO*********************/
+  /*?=========== Our projects  ===========*/
+
+  /* Styles for <h2 class="hidden-header">,  are defined in the COMPONENTS section. */
+  /*?============== Filter ==============*/
+  .projects {
+    padding-top: 96px;
+    padding-bottom: var(--default-big-gap);
+  }
+
+  .selection-portfolio {
+    justify-content: center;
+    margin-bottom: 72px;
+  }
+
+  /*?============== / Filter ==============*/
+
+  /*?========= /Photo gallery of projects ==========*/
+
+  .projects-list {
+    gap: calc(2 * var(--default-small-gap));
+    column-gap: var(--default-small-gap);
+  }
+
+  .projects-item {
+    flex-basis: calc((100% - 2 * var(--default-small-gap)) / 3);
+  }
+
+  /*?========= / Photo gallery of projects ==========*/
+  /*! ******************** / MAIN PORTFOLIO *********************/
+
+  /*%%%%%%%%%%%%%%%%%%%%%%%% /PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
 
   /*! ***************** FOOTER (for everyone)******************/
   .footer-site {

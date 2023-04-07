@@ -346,6 +346,131 @@ button {
 
 /*%%%%%%%%%%%%%%%%%%%%%%%% / MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
 
+/*%%%%%%%%%%%%%%%%%%%%%%%% PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
+/*! ********************  MAIN PORTFOLIO*********************/
+/*?=========== Our projects  ===========*/
+
+/* Styles for <h2 class="hidden-header">,  are defined in the COMPONENTS section. */
+/*?============== Filter ==============*/
+
+.projects {
+  padding-top: calc((var(--default-small-gap)) * 2);
+  padding-bottom: calc((var(--default-small-gap)) * 2);
+}
+
+.selection-portfolio {
+  width: 263px;
+  height: 96px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: var(--default-small-gap);
+  column-gap: 16px;
+  /* gap: var(--default-small-gap); */
+  margin-bottom: calc((var(--default-small-gap)) * 2);
+}
+
+.selection-btn {
+  background: var(--color-light);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 8px 16px;
+
+  /* Button Text */
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-brand);
+  box-shadow: none;
+
+  transition: background-color var(--transition-dur-and-fun), color var(--transition-dur-and-fun), box-shadow var(--transition-dur-and-fun), border-color var(--transition-dur-and-fun);
+}
+
+.selection-btn:hover,
+.selection-btn:focus {
+  background-color: var(--color-pressed-state);
+  color: var(--color-title-site);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-pressed-state);
+}
+
+.selection-btn {
+  cursor: pointer;
+}
+
+/*?============== / Filter ==============*/
+
+/*?========= /Photo gallery of projects ==========*/
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc((var(--default-small-gap)) * 2);
+  column-gap: var(--default-small-gap);
+}
+
+.projects-item {
+  flex-basis: 100%;
+}
+
+.projects-link {
+  display: block;
+  box-shadow: none;
+  transition: box-shadow var(--transition-dur-and-fun);
+}
+
+.projects-link:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.projects-info {
+  padding: 32px 16px;
+  width: 100%;
+  background: var(--color-title-site);
+  border-left: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+  border-right: 1px solid var(--color-accent);
+}
+
+/* Styles for  <h2 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body (except color)*/
+.projects-text {
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+.projects_wrapper_overlay {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px 0 32px;
+
+  background-color: var(--color-primary-brand);
+  color: var(--color-light);
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform var(--transition-dur-and-fun);
+}
+
+.projects-link:hover .projects_overlay,
+.projects-link:focus .projects_overlay {
+  transform: translateY(0%);
+}
+
+/*?========= / Photo gallery of projects ==========*/
+/*! ******************** / MAIN PORTFOLIO *********************/
+/*%%%%%%%%%%%%%%%%%%%%%%%% /PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
+
 /*! ***************** FOOTER (for everyone)******************/
 .footer-site {
   background: var(--color-dark);
