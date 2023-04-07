@@ -2,6 +2,193 @@
 /* ! @@@@@@@@@@@@@@@@@@@@@   MOBILE    @@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* ! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
+/* ?++++++ MOBILE MENU ++++++++ */
+.mobile-menu-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: index 1000;
+  top: 0;
+  left: 0;
+  background-color: var(--color-title-site);
+  /* background-color: transparent; */
+  overflow: scroll;
+  opacity: 1;
+  transition: opacity var(--transition-dur-and-fun), transform var(--transition-dur-and-fun);
+}
+
+.mobile-menu-wrap.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  opacity: hidden;
+}
+
+.mobile-menu-wrap.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.25);
+}
+
+.mobile-menu-container {
+  height: 796px;
+  position: relative;
+  padding: 80px 35px 40px 40px;
+  background-color: var(--color-title-site);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  /* overflow: scroll; */
+}
+
+.mobile-menu-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  /* height: 796px; */
+  height: 100%;
+  gap: calc(100vh) 100vh;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: var(--default-small-gap);
+  right: var(--default-small-gap);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--default-small-gap);
+  height: var(--default-small-gap);
+
+  background: var(--color-accent);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  padding: 0;
+
+  transition: background-color var(--transition-dur-and-fun), fill var(--transition-dur-and-fun);
+}
+
+.modal-close-btn:focus {
+  background-color: var(--color-pressed-state);
+  fill: var(--color-title-site);
+}
+
+/* .mobile-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+/*?============== mobile-menu-nav  ==============*/
+.mobile-menu-nav {
+  margin-bottom: auto;
+}
+.mobile-menu-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--color-dark);
+  transition: color var(--transition-dur-and-fun);
+  position: relative;
+}
+
+.menu-link:focus,
+.menu-link:active {
+  color: var(--color-pressed-state);
+}
+
+.mobile-menu {
+  /* display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: start; */
+}
+
+.mobile-menu-item {
+  margin-bottom: 40px;
+}
+
+.mobile-menu-link.current {
+  color: var(--color-pressed-state);
+}
+
+/*?============== / mobile-menu-nav  ==============*/
+
+/*?============== mobile-contacts  ==============*/
+
+.mobile-contacts-list {
+  /* display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: start; */
+  margin-bottom: 48px;
+}
+
+.mobile-mail-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+.mobile-tel-link {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--color-primary-brand);
+  margin-bottom: 40px;
+}
+
+/*?============== / mobile-contacts  ==============*/
+
+/* <!-- contacts in social networks --> */
+
+.mobile-social-icon-list {
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.mobile-social-icon-item {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-social-icon-link {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-radius: 50%;
+  background: var(--color-primary-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-dur-and-fun);
+}
+
+.mobile-social-icon-img {
+  width: var(--default-small-gap);
+  height: var(--default-small-gap);
+  fill: var(--color-title-site);
+}
+
+.mobile-social-icon-link:focus {
+  background: var(--color-pressed-state);
+}
+
+/* <!-- /mobile -contacts in social networks --> */
+/* ?++++++ MOBILE MENU ++++++++ */
+
 @media screen and (min-width: 320px) {
   /*?===========  Our Team  ===========*/
   .team .container {
@@ -62,6 +249,7 @@
 
   .mobile-menu-open-btn {
     margin-left: auto;
+    margin-right: 8px;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -93,7 +281,8 @@
   .container {
     width: 768px;
   }
-  .mobile-menu-open-btn {
+  .mobile-menu-open-btn,
+  .mobile-menu-wrap {
     display: none;
   }
 

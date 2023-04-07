@@ -55,8 +55,8 @@ button {
 .container {
   padding-left: 16px;
   padding-right: 16px;
-
-  outline: 1px solid grey;
+  /* 
+  outline: 1px solid grey; */
 }
 
 .hidden-header {
