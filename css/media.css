@@ -294,6 +294,7 @@
 
   .logo {
     margin-right: 120px;
+    text-align: left;
   }
 
   /*?============== Menu  ==============*/
@@ -452,10 +453,9 @@
   }
 
   .selection-portfolio {
-    width: 100%;
+    justify-content: center;
     height: 48px;
     flex-wrap: nowrap;
-    justify-content: space-between;
     gap: var(--default-small-gap);
     margin-bottom: 64px;
   }
